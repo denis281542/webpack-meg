@@ -544,9 +544,9 @@
 }
 
 @media (max-width: 1200px) {
-  .nav {
+  /* .nav {
     height: 75px;
-  }
+  } */
 
   .nav.active {
     padding: 0 0 30px 0;

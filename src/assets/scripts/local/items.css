@@ -116,7 +116,7 @@
 }
 @font-face {
   font-family: "Geometria";
-  src: url("/fonts/fonts/geometria.ttf") format("truetype");
+  src: url("/src/fonts/fonts/geometria.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }

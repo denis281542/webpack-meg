@@ -3,7 +3,9 @@ import './order.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import './header.js'
 import './footer.js'
+import './item-header.js'
 import './order.js'
+import './items.css'
 
 // /*Menu*/
 // let navToggle = document.getElementById('nav-toggle')

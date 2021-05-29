@@ -31,23 +31,23 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: 'vipusknoi-v-megalende.html',
-      template: './src/assets/templates/vipusknoi-v-megalende.html'
+      template: './src/assets/templates/pages/vipusknoi-v-megalende.html'
     }),
     new HtmlWebpackPlugin({
       filename: 'megalend-polnostyu-otkrit.html',
-      template: './src/assets/templates/megalend-polnostyu-otkrit.html'
+      template: './src/assets/templates/pages/megalend-polnostyu-otkrit.html'
     }),
     new HtmlWebpackPlugin({
       filename: 'pitstsa-v-podarok.html',
-      template: './src/assets/templates/pitstsa-v-podarok.html'
+      template: './src/assets/templates/pages/pitstsa-v-podarok.html'
     }),
     new HtmlWebpackPlugin({
       filename: 'igrovie-avtomati-otkriti.html',
-      template: './src/assets/templates/igrovie-avtomati-otkriti.html'
+      template: './src/assets/templates/pages/igrovie-avtomati-otkriti.html'
     }),
     new HtmlWebpackPlugin({
       filename: 'bonusnaya-sistema.html',
-      template: './src/assets/templates/bonusnaya-sistema.html'
+      template: './src/assets/templates/pages/bonusnaya-sistema.html'
     }),
   ],
   module: {
