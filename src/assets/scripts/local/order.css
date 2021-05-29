@@ -395,7 +395,7 @@
 }
 
 /* Modal */
-.modal {
+/* .modal {
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
@@ -501,7 +501,7 @@
   display: flex;
   flex-direction: column;
 }
-
+ */
 /* Media queris */
 
 @media (max-width: 1200px) {
@@ -605,13 +605,13 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .modal__form {
+  /* .modal__form {
     height: auto;
-  }
+  } */
 
-  .form {
+  /* .form {
     padding: 20px;
-  }
+  } */
 }
 @media (max-width: 480px) {
   /* Offers */
@@ -701,14 +701,14 @@
     padding: 0 10px 35px;
   }
 
-  .modal__form {
+  /* .modal__form {
     max-width: 85vw;
     max-height: 80vh;
   }
 
   .form {
     max-width: 288px;
-  }
+  } */
 }
 /* Animations */
 .fade {

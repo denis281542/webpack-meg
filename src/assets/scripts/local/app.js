@@ -1,9 +1,10 @@
 import './style.css'
 import './order.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
-import './header.js'
 import './footer.js'
 import './item-header.js'
+import './header.js'
+import './modal-window.js'
 import './order.js'
 import './items.css'
 

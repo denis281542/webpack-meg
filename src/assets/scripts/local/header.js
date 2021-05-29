@@ -223,7 +223,7 @@ class Header extends HTMLElement {
             <a href="/">
               <img src="/src/assets/images/logo.png" alt="">
             </a>
-            <a type="a" class="menu__btn" href="#">Заказать праздник</a>
+            <a type="a" class="menu__btn">Заказать праздник</a>
             <div class="toggle__wrapper">
               <button class="menu__toggle">Меню</button>
             </div>
@@ -234,4 +234,41 @@ class Header extends HTMLElement {
   }
 }
 
-customElements.define('header-component', Header);
+customElements.define('header-component', Header)
+
+/* Menu */
+let toggleBtn = document.querySelector('.menu__toggle')
+let toggleWrapper = document.querySelector('.toggle__wrapper')
+let menuActive = document.querySelector('.menu')
+let menuLeft = document.querySelector('.menu__left')
+let menuRigth = document.querySelector('.menu__right')
+let menuBg = document.querySelector('.header__menu-bg')
+let header = document.querySelector('.header')
+
+function toggleActive() {
+  toggleBtn.classList.toggle('menu__toggle--active')
+  menuActive.classList.toggle('menu--active')
+  menuBg.classList.toggle('header__menu-bg--active')
+
+  if(!menuLeft.classList.contains('menu__left--active') &&
+  !menuRigth.classList.contains('menu__right--active')) {
+  setTimeout(function() {
+      menuLeft.classList.add('menu__left--active')
+      menuRigth.classList.add('menu__right--active')
+    }, 1000)
+  } else {
+    menuLeft.classList.remove('menu__left--active')
+    menuRigth.classList.remove('menu__right--active')
+  }
+}
+
+function closeMenu(e) {
+  if(e.target.classList.contains('header__menu-bg--active')) {
+    !toggleActive()
+  }
+}
+
+toggleWrapper.addEventListener('click', toggleActive)
+menuBg.addEventListener('click', closeMenu)
+
+

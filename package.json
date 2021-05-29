@@ -1,7 +1,7 @@
 {
   "name": "code",
   "version": "1.0.0",
-  "description": "",
+  "description": "��#\u0000 \u0000w\u0000e\u0000b\u0000p\u0000a\u0000c\u0000k\u0000-\u0000m\u0000e\u0000g\u0000\r\u0000 \u0000",
   "main": "app.js",
   "scripts": {
     "start": "webpack serve --open",
@@ -21,5 +21,13 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denis281542/webpack-meg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/denis281542/webpack-meg/issues"
+  },
+  "homepage": "https://github.com/denis281542/webpack-meg#readme"
 }
