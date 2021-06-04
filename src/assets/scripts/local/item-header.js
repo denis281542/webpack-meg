@@ -1,3 +1,5 @@
+import './items.css'
+
 class HeaderItem extends HTMLElement {
   constructor() {
     super()

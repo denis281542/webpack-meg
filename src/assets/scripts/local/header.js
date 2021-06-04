@@ -221,7 +221,7 @@ class Header extends HTMLElement {
               </li>
             </ul>
             <a href="/">
-              <img src="/src/assets/images/logo.png" alt="">
+              <img src="baa2b45d7c9bed4a275f.png" alt="">
             </a>
             <a type="a" class="menu__btn">Заказать праздник</a>
             <div class="toggle__wrapper">

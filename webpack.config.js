@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   entry: './src/assets/scripts/local/app.js',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'public'),
   },
   devServer: {
@@ -64,15 +64,28 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
-      // {
-      //   test: /\.css$/i,
-      //   exclude: /\.order.css$/i,
-      //   loader: 'css-loader',
-      // },
-      // {
-      //   test: /\.order.css$/i,
-      //   type: 'asset/resource',
-      // },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: {
+          sources: {
+            list: [
+              // All default supported tags and attributes
+              '...',
+              {
+                tag: 'img',
+                attribute: 'data-src',
+                type: 'src',
+              },
+              {
+                tag: 'img',
+                attribute: 'data-srcset',
+                type: 'srcset',
+              },
+            ],            
+          },
+        },
+      },
     ],
   },
 };

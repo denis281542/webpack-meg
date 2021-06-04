@@ -1,12 +1,57 @@
-import './style.css'
-import './order.css'
-import '@fortawesome/fontawesome-free/css/all.min.css'
-import './footer.js'
-import './item-header.js'
-import './header.js'
-import './modal-window.js'
-import './order.js'
-import './items.css'
+// import './style.css'
+// import './order.css'
+// import '@fortawesome/fontawesome-free/css/all.min.css'
+// import './footer.js'
+// import './item-header.js'
+// import './header.js'
+// import './modal-window.js'
+// import './order.js'
+// import './items.css'
+
+// var items = require("./items.css");
+// var itemsHeader = require("./item-header.js");
+
+/* Path css/js to items */
+const patHome = () => {
+  if(window.location.pathname === "/") {
+    require('./style.css') 
+    require('./footer.js') 
+    require('./header.js') 
+    require('./modal-window.js') 
+    require('@fortawesome/fontawesome-free/css/all.min.css') 
+  }
+  return
+}
+patHome()
+
+const pathOrder = () => {
+  if(window.location.pathname === "/order.html") {
+    require('./order.css')
+    require('./header.js')
+    require('./footer.js')
+    require('./modal-window.js')
+    require('./order.js')
+  }
+} 
+pathOrder()
+
+const pathItems = (path) => {
+  if(window.location.pathname === path) {
+    import('./item-header.js')
+    import('./items.css')
+  }
+}
+pathItems("/bezlimit-v-megalende.html")
+pathItems("/otmet-den-rozhdeniya-v-kino.html")
+pathItems("/vipusknoi-v-megalende.html")
+pathItems("/megalend-polnostyu-otkrit.html")
+pathItems("/pitstsa-v-podarok.html")
+pathItems("/bonusnaya-sistema.html")
+// require.ensure(["c"], function(require) {
+//   require("b").xyz();
+//   var d = require("d");
+// });
+
 
 // /*Menu*/
 // let navToggle = document.getElementById('nav-toggle')

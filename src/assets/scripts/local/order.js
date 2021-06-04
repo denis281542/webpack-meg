@@ -29,6 +29,8 @@
 // let currentDate = formatDate(date)
 // dateInput.value = currentDate
 
+import './order.css'
+
 /* Open modal */
 let offersList = document.querySelector('.offers__list')
 let phoneSection = document.querySelectorAll('.phone')
