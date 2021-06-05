@@ -17,7 +17,6 @@ const patHome = () => {
     require('./style.css') 
     require('./footer.js') 
     require('./header.js') 
-    require('./touch-slider.js') 
     require('./modal-window.js') 
     require('@fortawesome/fontawesome-free/css/all.min.css') 
   }
@@ -32,6 +31,7 @@ const pathOrder = () => {
     require('./footer.js')
     require('./modal-window.js')
     require('./order.js')
+    require('./touch-slider.js') 
   }
 } 
 pathOrder()
