@@ -17,6 +17,7 @@ const patHome = () => {
     require('./style.css') 
     require('./footer.js') 
     require('./header.js') 
+    require('./touch-slider.js') 
     require('./modal-window.js') 
     require('@fortawesome/fontawesome-free/css/all.min.css') 
   }
@@ -136,7 +137,7 @@ pathItems("/bonusnaya-sistema.html")
 
 // window.addEventListener('scroll', checkPosition);
 
-// /* Carousel */
+/* Carousel */
 // var slideIndex = 1;
 // showSlides(slideIndex);
 
@@ -170,9 +171,64 @@ pathItems("/bonusnaya-sistema.html")
 
 // let nextBtn = document.querySelector('.next-btn')
 // let prevBtn = document.querySelector('.prev-btn')
+// let slides = document.querySelectorAll(".attractions-item");
 
-// /* Order route */
-// let orderBtn = document.getElementById('order')
-// orderBtn.addEventListener('click', () => {
-//   location.assign('/order.html')
+// prevBtn.addEventListener('click', () => {
+//   slides.forEach(el => {
+//     console.log(el);
+//   })
+//   // console.log(slides[0].style.display = 'none ')
 // })
+
+
+
+
+
+
+
+
+// Готовый слайдер
+// const carouselSlider = document.querySelector('.attractions-list')
+// const carouselItem = document.querySelectorAll('.attractions-item')
+// const itemWidth = document.querySelector('.attractions-list').clientWidth / (carouselItem.length)
+
+// let nextBtn = document.querySelector('.next-btn')
+// let prevBtn = document.querySelector('.prev-btn')
+
+// let counter = 0
+// const size = 446
+
+// prevBtn.addEventListener('click', () => {
+//   counter--
+//   carouselSlider.style.transform = 'translateX(' + (counter * - size) + 'px)'
+//   if(counter <= 0) {
+//     counter = 3
+//   } 
+// })
+
+// nextBtn.addEventListener('click', () => {
+//   counter++
+//   carouselSlider.style.transform = 'translateX(' + (counter * - size) + 'px)'
+//   if(counter >= 2) {
+//     counter = -1
+//   }
+// })
+
+// function sliderMedia() {
+// if (window.matchMedia("(min-width: 915px)").matches) {
+//   carouselSlider.style.display = "block";  
+//     slides[slideIndex].style.display = "block";  
+//     slides[slideIndex + 1].style.display = "block";
+//   } else if(window.matchMedia("(min-width: 670px)").matches) {
+//     slides[slideIndex - 1].style.display = "block";  
+//     slides[slideIndex].style.display = "block";  
+//   } else {
+//     slides[slideIndex].style.display = "block";  
+//   }
+// }
+
+// sliderMedia()
+
+
+
+
