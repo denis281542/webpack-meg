@@ -11,7 +11,7 @@
 .attractions-list {
   display: inline-flex;
   transform: translateX(0);
-  transition: transform 1.3s;
+  transition: transform .1s;
   cursor: grab;
 }
 .attractions-item {
@@ -20,9 +20,9 @@
   user-select: none;
 }
 .attractions-item img {
-  transition: transform 1.3s ease-in-out;
+  transition: transform .1s ease-in-out;
   width: 100%;
-  height: auto;
+  height: 100%;
   cursor: grabbing;
   border-radius: 15px;
   box-shadow: 0 0 0 1px #e0dfde;
@@ -40,5 +40,5 @@
   cursor: grabbing;
 }      
 .attractions-list.grabbing img {
-  transform: scale(0.9);
+  transform: scale(0.98);
 }  

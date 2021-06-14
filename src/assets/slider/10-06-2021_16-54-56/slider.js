@@ -13,7 +13,7 @@ let isDragging = false,
 
 slides.forEach((el, idx) => {
   el.style.width = window.innerWidth * .5 + "px"
-  el.style.marginRight = '100px'
+  el.style.marginRight = window.innerWidth * .05 + "px"
 
   el.addEventListener('click', e => {
     e.preventDefault()
@@ -43,6 +43,7 @@ window.oncontextmenu = (e) => {
 
 function touchStart(idx) {
   return function(e) {
+    console.log('s');
     isDragging = true
     currentIndex = idx
     startPos = getPositionX(e)
@@ -95,10 +96,10 @@ function setPositionByIndex() {
   setSliderPosition()
 }
 
-const infinitySlider = setInterval(() => {
-  currentIndex++
-  currentTranslate = currentIndex * (-window.innerWidth * .5 - 100)
-  if(currentIndex > 4) {currentTranslate = 0, currentIndex = 0}
+// const infinitySlider = setInterval(() => {
+//   currentIndex++
+//   currentTranslate = currentIndex * (-window.innerWidth * .5 - 100)
+//   if(currentIndex > 4) {currentTranslate = 0, currentIndex = 0}
 
-  setSliderPosition()
-}, 3500)
+//   setSliderPosition()
+// }, 3500)
