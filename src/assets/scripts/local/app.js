@@ -48,6 +48,7 @@ pathItems("/vipusknoi-v-megalende.html")
 pathItems("/megalend-polnostyu-otkrit.html")
 pathItems("/pitstsa-v-podarok.html")
 pathItems("/bonusnaya-sistema.html")
+pathItems("/igrovie-avtomati-otkriti.html")
 // require.ensure(["c"], function(require) {
 //   require("b").xyz();
 //   var d = require("d");
