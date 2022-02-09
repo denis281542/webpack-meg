@@ -2,4 +2,4 @@
 Функционал проекта: авторизация/регистрация, тач-слайдер, анимированные табы, раскрывающиеся списки, динамические модальные окна, кастомное модальное окно на яндекс карте(работа с API YandexMaps), личный кабинет(в разработке), форма заказа(в разработке). 
 
 Для запуска: 
-  git clone https://github.com/denis281542/webpack-meg.git => cd webpack-meg => npm init => npm start. 
+  git clone https://github.com/denis281542/webpack-meg.git => cd webpack-meg => npm init => npm start(Это не стрелочная функция))). 
