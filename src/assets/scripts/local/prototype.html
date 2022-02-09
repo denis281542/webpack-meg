@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('https://wallbox.ru/resize/1024x768/wallpapers/main/201302/a498112f5ad5a52.jpg');
+  background-size: cover;
+}
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+.link {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  transition: transform .8s;
+  border-radius: 3px;
+  margin-top: 80vh;
+}
+.link1 {
+  width: 30px;
+  height: 20px;
+  background-color: green;
+  border-radius: 3px;
+  transition: width 2s, height 2s;
+  margin-left: 300px;
+  position: absolute;
+
+}
+.link2 {      
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  transition: transform .8s;
+  border-radius: 4px;
+  margin-top: 80vh;
+}
+.col {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+.empty {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0);
+  transition: background-color .5s, backdrop-filter .8s;
+}
+.filter {      
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+.start {
+  top: 0;
+  left: 0;
+  z-index: 999;
+  position: relative;
+}
+
+    </style>
+
+    <div>
+
+
+
+        <div class="container">
+            <div class="link2">
+              <img src="https://buzza.ru/public/uploads/images/ade9a6a084ed57b4617cbb9d50fb950d/2hAlqf.jpg" 
+              width="20" height="20" alt="">
+            </div>
+            <div class="link"></div>
+            <div class="link1"></div>
+          </div>
+
+
+
+
+       <button id="btn">Promise</button>
+    </div>
+
+    <script>
+        document.querySelector('button').addEventListener('click', () => {
+            let promise = new Promise(function(resolve, reject) {
+                setTimeout(() => resolve("done"), 2000);
+            })
+
+            promise.then((value) => {
+            console.log(value)})
+        })
+
+
+
+
+
+
+
+
+const link = document.querySelector('.link')
+const link1 = document.querySelector('.link1')
+const link2 = document.querySelector('.link2')
+
+link.addEventListener('click', animationElement)
+link1.addEventListener('click', animationElement)
+link2.addEventListener('click', animationElement)
+
+function animationElement(ev) {
+  ev.preventDefault()  
+  const ANIMATION_SPEED = '.6s'
+
+  let elemWidth = this.offsetWidth/2,
+      elemHeidght = this.offsetHeight/2,      
+      movingElemX = document.documentElement.clientWidth/2 - (this.getBoundingClientRect().left + elemWidth),
+      movingElemY = document.documentElement.clientHeight/2 - (this.getBoundingClientRect().top + elemHeidght),
+      scaleX = (document.documentElement.clientWidth/2) / (elemWidth),
+      scaleY = (document.documentElement.clientHeight/2) / (elemHeidght)
+
+  /*Create wrapper on element*/
+  let wrap = document.createElement('div') 
+  wrap.className = 'start'
+  this.before(wrap)     
+    createBg()
+    // let p1 = new Promise(function(resolve, reject) {
+    //     console.log(this);
+    //     resolve(centerElement(wrap, this, movingElemX, movingElemY, ANIMATION_SPEED))
+    // })
+    // .then(function(result) {
+    //     console.log('res', this);
+    //     createClone(this, scaleX, scaleY, ANIMATION_SPEED)
+    // }) 
+
+    new Promise((res, rej) => {
+        res(centerElement(wrap, this, movingElemX, movingElemY, ANIMATION_SPEED))
+    }).then(r => createClone(this, scaleX, scaleY, ANIMATION_SPEED))
+    
+ 
+
+this.style.borderRadius = '0px'
+} 
+
+function centerElement(wrap, el, movingElemX, movingElemY, ANIMATION_SPEED) {
+  wrap.style.transitionDuration = ANIMATION_SPEED
+  wrap.style.transitionProperty = 'left, top'
+  wrap.style.width = el.clientWidth + 'px'
+  el.style.position = 'relative'
+  wrap.append(el)
+  wrap.style.left = movingElemX + 'px'
+  wrap.style.top = movingElemY + 'px'
+}
+
+function createBg() {
+  let backgroundWrap = document.createElement('div')
+  backgroundWrap.className = 'empty'      
+  document.body.append(backgroundWrap)
+  backgroundWrap.className += ' filter'
+}
+
+function createClone(el, scaleX, scaleY, ANIMATION_SPEED) {
+  let cloneHeight = window.getComputedStyle(el).getPropertyValue('height'),
+    cloneWidth = window.getComputedStyle(el).getPropertyValue('width'),
+    clone = document.createElement('div')
+
+  clone.style.width = cloneWidth
+  clone.style.height = cloneHeight
+  clone.style.backgroundColor = '#ccc'
+  clone.style.position = 'absolute'
+  clone.style.zIndex = '1'
+  el.before(clone)
+
+  setTimeout(() => {
+    coverClone(clone, scaleX, scaleY, ANIMATION_SPEED)
+  }, 100)  
+}
+
+function coverClone(el, scaleX, scaleY, ANIMATION_SPEED) {
+  el.style.transitionDuration = ANIMATION_SPEED
+  el.style.transitionProperty = 'transform'
+  el.style.transform = `scale(${scaleX}, ${scaleY})`
+}
+        
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+.icons {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.icons__title {
+	font-size: 42px;
+    line-height: 1.23;
+		color: #3b3b3b;
+		font-weight: 700;
+		margin-bottom: 105px;
+		text-align: center;
+}
+
+.icons__list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.icons__img {
+	border-radius: 50%;
+}
+
+.icon {
+	max-width: 220px;
+	text-align: center;
+}
+
+.icon h4 {
+	font-size: 24px;
+	line-height: 1.35;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+.icon img {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 25px;
+}
+
+.icon p {
+	font-size: 16px;
+	line-height: 1.55;
+	font-weight: 400;
+	color: #000;
+}

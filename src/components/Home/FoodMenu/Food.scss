@@ -1,0 +1,64 @@
+.cafe {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cafe-bg {
+  background: url('/src/assets/images/cafe-bg.webp');
+  height: 560px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  
+}
+
+.cafe-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.60), rgba(0,0,0,0.20));
+}
+
+
+.cafe-title {
+  font-size: 48px;
+  line-height: 1.23;
+  color: #fff;
+  margin-bottom: 70px;
+}
+
+.cafe-btn, .kids-btn, .pizza-btn {
+  background-color: #ff0073;
+  border-radius: 100px;
+  padding: 20px 60px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.pizza-btn {
+  background-color: #3e2d8b;
+}
+
+.kids-btn {
+  background-color: #00b3e4;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+@media (max-width: 640px) {
+  .cafe-buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cafe-btn, .pizza-btn {
+    flex: 100%;
+    margin-bottom: 10px;
+  }
+}

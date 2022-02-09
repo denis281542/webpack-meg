@@ -1,0 +1,38 @@
+.map-img {
+    width: 250px;
+    height: auto;
+    box-shadow: rgb(0 0 0 / 35%) 0px 3px 3px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  .ymaps-2-1-79-balloon, .ymaps-2-1-79-balloon__layout {
+    border-radius: 5px;
+  }
+  .drugstore-mini {
+    position: relative;
+    background-color: #fff;
+    width: 250px;
+    font-size: 14px;
+    font-weight: 300;
+    -webkit-box-shadow: 0 14px 24px rgb(150 150 150 / 10%);
+    box-shadow: 0 14px 24px rgb(150 150 150 / 10%);
+    border-radius: 5px;
+  }
+  .drugstore-mini span {
+    font-weight: 700;
+  }
+  .drugstore-mini > div {
+    margin-bottom: 5px;
+  }
+  .drugstore-mini > div:last-child {
+    margin-bottom: 0;
+  }
+  .map-header {
+    text-align: center;
+    margin: 0;
+  }
+  .ymaps-2-1-79-balloon-overlay {
+    
+    left: 179px;
+    top: 340px;
+  }

@@ -1,63 +1,54 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const webpack = require('webpack')
+const dotenv = require('dotenv')  
+
+dotenv.config();
+
+
 
 module.exports = {
   mode: 'development',
-  entry: './src/assets/scripts/local/app.js',
+  entry: './src/main.js',
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'public'),
   },
   devServer: {
-    port: 3000
+    port: 3000,
+    historyApiFallback: true,
   },
   devtool: 'inline-source-map',
   plugins: [ 
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/assets/templates/pages/index.html'
+      template: './src/index.html'
     }),
-    new HtmlWebpackPlugin({
-      filename: 'order.html',
-      template: './src/assets/templates/pages/order.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'otmet-den-rozhdeniya-v-kino.html',
-      template: './src/assets/templates/pages/otmet-den-rozhdeniya-v-kino.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'bezlimit-v-megalende.html',
-      template: './src/assets/templates/pages/bezlimit-v-megalende.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'vipusknoi-v-megalende.html',
-      template: './src/assets/templates/pages/vipusknoi-v-megalende.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'megalend-polnostyu-otkrit.html',
-      template: './src/assets/templates/pages/megalend-polnostyu-otkrit.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'pitstsa-v-podarok.html',
-      template: './src/assets/templates/pages/pitstsa-v-podarok.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'igrovie-avtomati-otkriti.html',
-      template: './src/assets/templates/pages/igrovie-avtomati-otkriti.html'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'bonusnaya-sistema.html',
-      template: './src/assets/templates/pages/bonusnaya-sistema.html'
-    }),
-  ],
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env)
+   })
+  ], 
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-object-rest-spread']
+          }
+        }
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
+      {
+        test: /\.(webp|png|svg|jpg|jpeg|gif|png)$/i,
         type: 'asset/resource',
       },
       {
@@ -85,6 +76,22 @@ module.exports = {
             ],            
           },
         },
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                indentWidth: 4,
+                includePaths: ["./src/assets/scripts/local/group/group.scss"],
+              },
+            },
+          },
+        ],
       },
     ],
   },

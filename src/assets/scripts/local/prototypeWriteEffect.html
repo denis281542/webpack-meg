@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+    </style>
+
+    <div class="text"></div>
+
+    <script>
+        const word = ['День рождения от 2000 руб.', 'Организуем мероприятие под ключ.']
+        let count = 0,
+					index = 0,
+					currentText = '',
+					letter = ''
+
+				function type() {
+					if(count === word.length) {
+						count = 0
+					}
+
+					currentText = word[count]
+					letter = currentText.slice(0, ++index)
+					if(letter.length === word[count].length) {
+						count++
+						index = 0
+					}
+					console.log(letter);
+					// letter = currentText.slice(0, ++index)
+
+					// let text = document.querySelector('.text').textContent = letter
+
+					// if(letter.length === currentText.length) {
+					// 	console.log('s');
+					// }
+					// if(letter.length === currentText.length) {
+					// 		index = 0
+					// 		count++
+					// }
+
+					
+					setTimeout(type, 500)
+
+				}
+
+				type()
+
+
+    </script>
+</body>
+</html>

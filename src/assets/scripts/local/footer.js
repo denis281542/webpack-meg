@@ -1,3 +1,5 @@
+import {logoFooter} from '../../images/img-prod/img'
+
 class Footer extends HTMLElement {
   constructor() {
     super()
@@ -31,7 +33,7 @@ class Footer extends HTMLElement {
       </style>
       <footer class="footer">
         <div class="footer__inner">
-          <img class="footer__logo" src="25b426fb7668dde3abef.png" alt="Логотип Мегаленд">
+          <img class="footer__logo" src=${logoFooter} alt="Логотип Мегаленд">
           <div class="footer__description">
             © Холдинг «Мегаполис», 2009 — 2020 <br>
             Условия договора публичной оферты (конфиденциальность и защита персональной информации) <br>
@@ -48,3 +50,4 @@ class Footer extends HTMLElement {
 }
 
 customElements.define('footer-component', Footer)
+

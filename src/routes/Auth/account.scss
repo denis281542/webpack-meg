@@ -1,0 +1,78 @@
+.account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    width: 70vw;
+    margin: 50px auto;
+
+    &__img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    &__img-user {
+        position: relative;
+        display: flex;
+
+        i {
+            font-size: 9rem;
+        }
+
+        input {
+            &[type="file"] {
+                display: none;
+            }
+        }        
+    }
+
+    &__file-upload {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+
+        top: 0;
+        right: 0;
+        // border-radius: 50%;
+        // border: 1px solid #ccc;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+        background-image: url('../../assets/images/icons/edit-regular.svg');
+        background-repeat:no-repeat;
+        background-position: center center;
+    }
+
+    input {
+        padding-left: 10px;
+
+        &:disabled {
+            background: white;
+            border: none;
+            color: #000;
+        }
+
+        &::placeholder {
+            color: #000;
+        }
+    }
+
+    &__btns-input {
+        button {
+            border: none;
+            border-radius: 50%;
+            background: #00b3e4;
+            font-size: 15px;
+            color: #fff;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+
+            &:first-child {
+                margin: 10px;
+            }
+        }
+    } 
+}

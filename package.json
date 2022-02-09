@@ -1,26 +1,60 @@
 {
   "name": "code",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000w\u0000e\u0000b\u0000p\u0000a\u0000c\u0000k\u0000-\u0000m\u0000e\u0000g\u0000\r\u0000 \u0000",
+  "description": "megaland",
   "main": "app.js",
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
+  },
   "scripts": {
     "start": "webpack serve --open",
+    "preprod": "node webpack.config.prod.js",
     "build": "webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@squoosh/lib": "^0.3.1",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.2.5",
+    "dotenv": "^11.0.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
+    "image-minimizer-webpack-plugin": "^2.2.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^9.0.0",
+    "mini-css-extract-plugin": "^2.0.0",
+    "sass": "^1.41.1",
+    "sass-loader": "^12.1.0",
     "style-loader": "^2.0.0",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack": "^5.56.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@reduxjs/toolkit": "^1.7.1",
+    "core-js": "^3.20.3",
+    "firebase": "^9.6.1",
+    "history": "^5.1.0",
+    "imagemin": "^8.0.0",
+    "imagemin-webp": "^7.0.0",
+    "npm": "^8.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
+    "react-yandex-maps": "^4.6.0",
+    "regenerator-runtime": "^0.13.9"
   },
   "repository": {
     "type": "git",

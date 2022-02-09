@@ -1,0 +1,109 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    button {
+      width: 200px;
+      padding: 10px;
+    }
+
+    .wrapper {
+      display: flex;
+      /* width: 1200px; */
+    }
+
+    .slider-container {
+      width: 960px;
+      overflow: hidden;
+    }
+
+    .slider-track {
+      display: flex;
+      transition-property: transform;
+      transition-duration: .3s;
+    }
+
+    .section-1 {
+      min-width: 960px;
+      height: 200px;
+      background-color: red;
+    }
+    .section-2 {
+      min-width: 960px;
+      height: 200px;
+      background-color: green;
+    }
+    .section-3 {
+      min-width: 960px;
+      height: 200px;
+      background-color: blue;
+    }
+
+    .container {
+      /* width: 1000px; */
+      margin: 0 auto;
+      padding: 50px;
+    }
+
+    .btn {
+      border: none;
+      background-color: transparent;
+    }
+
+    .btn--active {
+      border-top: 1px solid #000;
+    }
+
+  </style>
+
+  <div class="container">
+    <div class="tabs">
+      <button class="btn btn--active" data-id="1" id="1">1</button>
+      <button class="btn" data-id="2" id="2">2</button>
+      <button class="btn" data-id="3" id="3">3</button>
+    </div>
+
+    <div class="wrapper">
+      <div class="slider-container">
+        <div class="slider-track">
+          <section class="section-1"></section>
+          <section class="section-2"></section>
+          <section class="section-3"></section>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script>
+    const btn1 = document.getElementById('1'),
+      btn2 = document.getElementById('2'),
+      btn3 = document.getElementById('3')
+
+    btn1.addEventListener('click', showContent)
+    btn2.addEventListener('click', showContent)
+    btn3.addEventListener('click', showContent)
+
+    function showContent(e) {
+      let id = +e.target.dataset.id - 1,
+        position = 0,
+        itemWidth = document.querySelector('.section-1').style
+console.log(this);
+      position += -id * 960
+      const container = document.querySelector('.slider-track')
+      // container.style.transform = `translateX(${position}  + 'px')`
+      container.style.transform = `translateX(${position}px)`
+    }
+  </script>
+  </body>
+  </html>

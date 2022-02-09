@@ -1,0 +1,101 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=282e7daa-8f35-41e8-9a7f-590c7ef1e8c4" type="text/javascript"></script>
+    <!-- <script src="icon_customImage.js" type="text/javascript"></script> -->
+	
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .content {
+    width: 204px;
+    background-color: #ccc;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .box {
+    display: flex;
+    background-color: red;
+    /* padding: 45px; */
+    width: 1200px;
+  }
+
+  .column {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 2px solid;
+    width: 200px;
+    margin-right: 90px;
+  }
+  .sqr {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  /* @media (max-width: 190px) {
+    .column {
+      width: 100%;
+    }
+  } */
+  .fl {
+    height: 100px;
+    background-color: #ccc;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .f {
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+  }
+</style>
+
+<div class="wrapper">
+  <div class="content">
+    <div class="box">
+        <div class="column">
+          <div class="sqr f"></div>
+          <div class="sqr f"></div>
+          <div class="sqr f"></div>
+          <div class="sqr f"></div>
+        </div>
+        <div class="column">          
+          <div class="sqr"></div>
+          <div class="sqr"></div>
+          <div class="sqr"></div>
+          <div class="sqr"></div>
+        </div>
+        <div class="column">
+          <div class="sqr"></div>
+          <div class="sqr"></div>
+          <div class="sqr"></div>
+          <div class="sqr"></div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="fl">
+  <div class="sqr f"></div>
+  <div class="sqr f"></div>
+  <div class="sqr f"></div>
+</div>
+
+<script>
+
+</script>
+  </body>
+  </html>

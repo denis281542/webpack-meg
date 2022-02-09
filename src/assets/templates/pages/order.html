@@ -10,11 +10,11 @@
 </head>
 <body>
   
-  <header-component></header-component>
-
+  <nav-component></nav-component>
+<!-- 
   <main>
     <section class="offers">
-      <div class="container">
+      <div class="container__offers">
         <h1 class="offers__title">Готовые предложения</h1>
         <p class="offers__description">
           мы ценим ваше время и собрали самые востребованные 
@@ -22,147 +22,7 @@
           заказа дня рождения, мы перезвоним для уточнения всех деталей
         </p>
 
-        <ul class="offers__list">
-          <li class="item">
-            <a class="item__link" href="#">
-              <img class="item__img" src="/src/assets/images/offer-1.jpg" alt="">
-              <div class="item__inner">
-                <p class="item__description">
-                  до 10 человек, +300 р. за каждого дополнительного гостя
-                </p>
-                <strong>Базовый за 4500 р.</strong>
-                <ul class="item__list">
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    45 мин. программа с аниматором
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    генератор мыльных пузырей
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    10 гелиевых шаров
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    час посещения детского сада или батута надувная горка
-                  </li>
-                </ul>
-              </div>
-            </a>
-          <button class="offers__btn btn">Заказать Базовый</button>
-          </li>
-          <li class="item">
-            <a class="item__link" href="#">
-              <img class="item__img" src="/src/assets/images/offer-2.jpg" alt="">
-              <div class="item__inner">
-                <p class="item__description">
-                  до 10 человек, +450 р. за каждого дополнительного гостя                </p>
-                <strong>Премиум за 6500 р.</strong>
-                <ul class="item__list">
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    часовой квест с аниматором
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    10 гелиевых шаров
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    10 пригласительных в кино
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    час посещения любых игровых площадок
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    час аренды банкетной комнаты
-                  </li>
-                </ul>
-              </div>
-            </a>
-          <button class="offers__btn btn">Заказать Премиум</button>
-          </li>
-          <li class="item">
-            <a class="item__link" href="#">
-              <img class="item__img" src="/src/assets/images/offer-3.jpg" alt="">
-              <div class="item__inner">
-                <p class="item__description">
-                  до 10 человек, +650 р. за каждого дополнительного гостя
-                </p>
-                <strong>VIP за 8900 р.</strong>
-                <ul class="item__list">
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    игровая карта на 1000 баллов
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    часовой квест с аниматором
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    10 гелиевых шаров
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    шар - цифра (или цифры) для именинника
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    безлимитное посещение любых игровых площадок
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    10 пригласительных в кино
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    час аренды банкетной комнаты
-                  </li>
-                  <li class="item__li bonus">
-                    <strong>Бонус:</strong>
-                    2 литра сока "Добрый", 3 любых пиццы, фруктовая тарелка
-                  </li>
-                </ul>
-              </div>
-            </a>
-          <button class="offers__btn btn">Заказать VIP</button>
-        </li>
-          <li class="item">
-            <a class="item__link" href="#">
-              <img class="item__img left" src="/src/assets/images/offer-4.jpg" alt="">
-              <div class="item__inner">
-                <p class="item__description">
-                  до 10 человек, +650 р. за каждого дополнительного гостя
-                </p>
-                <strong>VIP Кино за 8900 р.</strong>
-                <ul class="item__list">
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    игровая карта на 1000 баллов
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    просмотр любого фильма 
-                  </li>
-                  <li class="item__li">
-                    <i class="fas fa-check"></i>
-                    час посещения любых игровых площадок на выбор
-                  </li>
-                  <li class="item__li bonus">
-                    <strong>Бонус:</strong>
-                    Детский поп-корн на выбор + сок 0,2 л/напиток 0,3 л — на выбор
-                  </li>
-                </ul>
-              </div>
-            </a>
-          <button class="offers__btn btn">Заказать VIP Кино</button>
-          </li>
-        </ul>
+        <ul class="offers__list"></ul>
       </div>
     </section>
 
@@ -170,9 +30,7 @@
       <p class="phone__title">
         Для заказа дня рождения позвоните
       </p>
-      <div class="phone__number">
-        8-800-600-33-92
-      </div>
+      <a href="tel:+7-800-600-33-92" class="phone__number">8-800-600-33-92</a>
       <p class="phone__order">
         или воспользуйтесь кнопкой для предзаказа
       </p>
@@ -180,7 +38,7 @@
     </section>
 
     <section class="banquet">
-      <div class="container">
+      <div class="container__offers">
         <a class="banquet__linkr" target="_blank" 
           href="https://drive.google.com/file/d/1jxywurnnp0_zKAn4MjXN1kT8-UJRFdxT/view">
           <i class="far fa-file-pdf"></i>
@@ -190,7 +48,7 @@
     </section>
 
     <section class="birthdays">
-      <div class="container">
+      <div class="container__offers">
         <h3 class="birthdays__title">
           Подробнее о Днях рождения
         </h3>
@@ -199,10 +57,12 @@
         </p>
 
         <div class="birthdays__tabs">
-          <div class="birthdays__tab">
-            <button class="tab tab--active">до 5 лет</button>
-            <button class="tab">старше 5 лет</button>
-            <button class="tab">доп. услуги</button>
+          <div class="birthdays__bookmark">
+            <button data-id="1" class="bookmark bookmark--active">
+              <div id="btnBookmark"></div>
+              до 5 лет</button>
+            <button data-id="2" class="bookmark">старше 5 лет</button>
+            <button data-id="3" class="bookmark">доп. услуги</button>
           </div>
 
           <p class="birthdays__item">
@@ -213,134 +73,14 @@
           </p>
         </div>
         <div class="birthdays__content">
-          <ul class="birthdays__list">
-            <li class="birthdays__card card">
-              <img src="/src/assets/images/card-1.jpg" alt="">
-              <h3 class="card__title">Герои в масках</h3>
-              <p class="card__description">
-                Встречайте самую крутую команду - Герои в масках!
-              </p>
-            </li>
-            <li class="birthdays__card card">
-              <img src="/src/assets/images/card-2.jpg" alt="">
-              <h3 class="card__title">Лол Единорог</h3>
-              <p class="card__description">
-                Самая модная и гламурная вечеринка с очаровательной куклой Единорожкой!
-              </p>
-            </li>
-            <li class="birthdays__card card">
-              <img src="/src/assets/images/card-3.jpg" alt="">
-              <h3 class="card__title">Лол Королева пчёл</h3>
-              <p class="card__description">
-                Никто не запрещает быть модными и умными одновременно.
-              </p>
-            </li>
-            <li class="birthdays__card card">
-              <img src="/src/assets/images/card-4.jpg" alt="">
-              <h3 class="card__title">Ми-ми-мишка</h3>
-              <p class="card__description">
-                О том, что существуют на свете забавные друзья Ми-ми-мишки, знают, наверное, все дети.
-              </p>
-            </li>
-          </ul>
-          <div class="card__wrapper card--hidden">
-            <ul class="birthdays__list">
-              <li class="birthdays__card card">
-                <img src="/src/assets/images/card-5.jpg" alt="">
-                <h3 class="card__title">Три кота</h3>
-                <p class="card__description">
-                  МИУ-МИУ-МИУ!
-                  Знакомьтесь, это Коржик и Карамелька.
-                </p>
-              </li>
-              <li class="birthdays__card card">
-                <img src="/src/assets/images/card-6.jpg" alt="">
-                <h3 class="card__title">Щенячий патруль</h3>
-                <p class="card__description">
-                  «Вперед, патруль!» - звучит воодушевляющий призыв бесстрашного мальчугана Зика Райдера.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <button id="show-btn" class="birthdays__btn btn">
-            Ещё варианты
-          </button>
-          <table class="birthdays__price price">
-            <thead>
-              <tr>
-                <th>Услуга</th>
-                <th>Цена (руб.)</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="price__subtitle">Анимационная программа (от 0 до 5 лет)</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Праздник по сценарию (45 мин) 1 вед Любой персонаж</td>
-                <td>2500</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Мини поздравление + генератор мыльных пузырей (20 мин)</td>
-                <td>2000</td>
-                <td></td>
-              </tr>
-              <tr class="price__subtitle">
-                <td>Квесты до 5 лет</td>
-                <td>Будни</td>
-                <td>Выходные</td>
-              </tr>
-              <tr>
-                <td>
-                  Герои в Масках
-                  <br>
-                  1 час
-                </td>
-                <td>3200</td>
-                <td>4000</td>
-              </tr>
-              <tr>
-                <td>
-                  Лол (Единорог, Королева пчёл)
-                  <br>
-                  1 час
-                </td>
-                <td>3200</td>
-                <td>4000</td>
-              </tr>
-              <tr>
-                <td>
-                  Ми-Ми-Мишка
-                  <br>
-                  1 час
-                </td>
-                <td>3200</td>
-                <td>4000</td>
-              </tr>
-              <tr>
-                <td>
-                  Три кота
-                  <br>
-                  1 час
-                </td>
-                <td>3200</td>
-                <td>4000</td>
-              </tr>
-              <tr>
-                <td>
-                  Щенячий Патруль
-                  <br>
-                  1 час
-                </td>
-                <td>3200</td>
-                <td>4000</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="birthdays__tables">
+            <div class="birthdays__table1"><!-- Add table in js order.js --></div>
+
+            <div class="birthdays__table2"><!-- Add table in js order.js --></div>
+            
+            <div class="birthdays__table3"><!-- Add table in js order.js --></div>
+
+          </div>          
         </div>
       </div>
     </section>
@@ -349,16 +89,14 @@
       <p class="phone__title">
         Для заказа дня рождения позвоните
       </p>
-      <div class="phone__number">
-        8-800-600-33-92
-      </div>
+      <a href="tel:+7-800-600-33-92" class="phone__number">8-800-600-33-92</a>
       <p class="phone__order">
         или воспользуйтесь кнопкой для предзаказа
       </p>
       <button class="phone__btn btn">Заказать день рождения</button>
     </section>
   </main>
-  
+   -->
   <footer-component></footer-component>
 
   <modal-component></modal-component>
